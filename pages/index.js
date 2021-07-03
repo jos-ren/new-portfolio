@@ -242,7 +242,7 @@ export default function Home() {
         <h1>Skills</h1>
         <Apps>
           {icons.map((o) => {
-            return <Icon tooltip={o.tooltip} img_src={o.img_src} />;
+            return <Icon tooltip={o.tooltip} img_src={o.img_src} key={o.id} />;
           })}
         </Apps>
       </Center>
