@@ -5,7 +5,7 @@ const Container = styled.button`
   border: 0;
   border-radius: 4px;
   height: 45px;
-  width: calc(100% - 48px);
+  width:100%;
   display: flex;
   justify-content: center;
   align-items: center;

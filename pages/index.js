@@ -2,6 +2,7 @@ import Head from "next/head";
 import styled from "styled-components";
 import Card from "../comps/Card";
 import Icon from "../comps/Icon";
+import useColorTheme from "use-color-theme";
 
 // --gutterSpace: 32px;
 // --screenXs: 576px;
@@ -98,30 +99,40 @@ const cards = [
     description: "A CRM with ",
     img_src: "/logos/cog.svg",
     href: "/projects/crm",
+    github_link: "/",
+    link: "/",
   },
   {
     title: "Pantro",
     description: "A Pantry app for your phone",
     img_src: "/logos/apple.svg",
     href: "/projects/pantro",
+    github_link: "/",
+    link: "/",
   },
   {
     title: "Petsave",
     description: "",
     img_src: "/logos/bone.svg",
     href: "/projects/petsave",
+    github_link: "/",
+    link: "/",
   },
   {
     title: "Poman",
     description: "",
     img_src: "/logos/spoon.svg",
     href: "/projects/poman",
+    github_link: "/",
+    link: "/",
   },
   {
     title: "Get'em",
     description: "",
     img_src: "/logos/truck.svg",
     href: "/projects/getem",
+    github_link: "/",
+    link: "/",
   },
 ];
 
@@ -160,6 +171,20 @@ export default function Home() {
   //creative tooltip
   //animations when clicking arrows
 
+  const colorTheme = useColorTheme("dark-theme", {
+    classNames: ["light-theme", "dark-theme"],
+  });
+
+  let github_src = "";
+  let link_src = "";
+  if (colorTheme.value === "light-theme") {
+    github_src = "icons/github.svg";
+    link_src = "icons/link.svg";
+  } else if (colorTheme.value === "dark-theme") {
+    github_src = "icons/github_w.svg";
+    link_src = "icons/link_w.svg";
+  }
+
   return (
     <Main>
       <Center>
@@ -178,6 +203,10 @@ export default function Home() {
                 img_src={o.img_src}
                 description={o.description}
                 href={o.href}
+                github_link={o.github_link}
+                link={o.link}
+                github_src={github_src}
+                link_src={link_src}
               />
             );
           })}

@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const Container = styled.button`
   border: 0;
   border-radius: 4px;
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--secondary-bg);
+  background-color: transparent;
   transition: background-color 0.2s ease-in;
   cursor: pointer;
   color: var(--headings);
@@ -18,6 +19,7 @@ const Container = styled.button`
   }
   hover,
   active {
+      border:1px solid red;
     background-color: var(--secondary-bg-hover);
     outline: none;
   }
@@ -27,11 +29,13 @@ const Container = styled.button`
   }
 `;
 
-const IconButton = ({ img_src }) => {
+const IconButton = ({ img_src, href }) => {
   return (
-    <Container>
-      <img src={img_src} />
-    </Container>
+    <Link href={href}>
+      <Container>
+        <img src={img_src} />
+      </Container>
+    </Link>
   );
 };
 

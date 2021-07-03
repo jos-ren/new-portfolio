@@ -19,10 +19,6 @@ const Container = styled.div`
     background: var(--secondary-bg-hover);
     cursor: pointer;
   }
-  button {
-    position: absolute;
-    bottom: 20px;
-  }
 `;
 
 const Top = styled.div`
@@ -46,7 +42,32 @@ const Circle = styled.div`
   }
 `;
 
-const Card = ({ title, description, href, img_src }) => {
+const Bottom = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  width: calc(100% - 48px);
+  bottom: 20px;
+  button:nth-child(1) {
+    margin-right: 10px;
+    width:70%;
+  }
+  button:nth-child(2) {
+    margin-right: 10px;
+  }
+`;
+
+const Card = ({
+  title,
+  description,
+  href,
+  img_src,
+  github_link,
+  link,
+  link_src,
+  github_src,
+}) => {
   return (
     <Link href={href}>
       <Container>
@@ -57,9 +78,11 @@ const Card = ({ title, description, href, img_src }) => {
           <h1>{title}</h1>
         </Top>
         <p>{description}</p>
-        <Button text="See Project" />
-        <IconButton img_src=""/>
-        <IconButton img_src=""/>
+        <Bottom>
+          <Button text="See Project" />
+          <IconButton href={github_link} img_src={github_src} />
+          <IconButton href={link} img_src={link_src} />
+        </Bottom>
       </Container>
     </Link>
   );
