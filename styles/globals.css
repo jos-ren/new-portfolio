@@ -1,21 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .light-theme {
-  --background: #fff;
+  --bg: #fff;
   --transparent-bg: rgba(255, 255, 255, 0.75);
   --secondary-bg: #e2e8f0;
   --secondary-bg-hover: #cdd7e5;
   --headings: #000;
   --text: #38393e;
+  --tertiary:#7E8BB6;
+  --gradient: linear-gradient(90deg, rgba(66,84,147,1) 0%, rgba(68,171,144,1) 73%, rgba(26,117,135,1) 100%);
+
 }
 
 .dark-theme {
-  --background: #181c1f;
+  --bg: #181c1f;
   --transparent-bg: rgba(24, 28, 31, 0.75);
   --secondary-bg: #20262a;
   --secondary-bg-hover: #34383a;
   --headings: #f9fafa;
   --text: #a0aec0;
+  --tertiary:#7E8BB6;
+  --gradient: linear-gradient(90deg, rgba(66,84,147,1) 0%, rgba(68,171,144,1) 73%, rgba(26,117,135,1) 100%);
 }
 
 /* .funky {
@@ -35,7 +40,7 @@ body {
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--bg);
 }
 
 a {
@@ -133,7 +138,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background);
+  background-color: var(--bg);
   transition: background-color 0.2s ease-in;
   cursor: pointer;
   color: var(--headings);

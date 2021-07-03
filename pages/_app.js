@@ -11,10 +11,10 @@ export const MyApp = ({ Component, pageProps }) => {
   let logo = "";
   if (colorTheme.value === "light-theme") {
     icon = "icons/moon.png";
-    logo = "logo.svg";
+    logo = "logos/josren.svg";
   } else if (colorTheme.value === "dark-theme") {
     icon = "icons/sun.svg";
-    logo = "white_logo.svg";
+    logo = "logos/josren_w.svg";
   }
   // console.log(icon, "icon");
 

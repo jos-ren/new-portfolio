@@ -54,7 +54,7 @@ const Container = styled.div`
   }
 `;
 
-const Icon = ({ img_url, tooltip }) => {
+const Icon = ({ img_src, tooltip }) => {
   const [style, setStyle] = useState({ display: "none" });
 
   return (
@@ -70,7 +70,7 @@ const Icon = ({ img_url, tooltip }) => {
         {tooltip}
         <div className="tooltip_arrow"></div>
       </p>
-      <img src={img_url} />
+      <img src={img_src} />
     </Container>
   );
 };
