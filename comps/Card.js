@@ -65,9 +65,10 @@ const Card = ({
   link,
   link_src,
   github_src,
+  key,
 }) => {
   return (
-    <Container>
+    <Container key={key}>
       <Top>
         <Circle>
           <img src={img_src} />

@@ -16,78 +16,97 @@ import useColorTheme from "use-color-theme";
 
 const icons = [
   {
+    id: 1,
     img_src: "icons/AWS.svg",
     tooltip: "AWS (DynamoDB, SES, SMS, S3)",
   },
   {
+    id: 2,
     img_src: "icons/React.svg",
     tooltip: "React",
   },
   {
+    id: 3,
     img_src: "icons/Javascript.svg",
     tooltip: "Javascript",
   },
   {
+    id: 4,
     img_src: "icons/PHP.svg",
     tooltip: "PHP",
   },
   {
+    id: 5,
     img_src: "icons/MySql.svg",
     tooltip: "MySql",
   },
   {
+    id: 6,
     img_src: "icons/PostgreSQL.svg",
     tooltip: "PostgreSQL",
   },
   {
+    id: 7,
     img_src: "icons/NextJS.svg",
     tooltip: "NextJS",
   },
   {
+    id: 8,
     img_src: "icons/NodeJS.svg",
     tooltip: "NodeJS",
   },
   {
+    id: 9,
     img_src: "icons/HTML.svg",
     tooltip: "HTML",
   },
   {
+    id: 10,
     img_src: "icons/CSS.svg",
     tooltip: "CSS: Cascaded Style Sheets",
   },
   {
+    id: 11,
     img_src: "icons/Adobe.svg",
     tooltip: "Adobe Creative Suite",
   },
   {
+    id: 12,
     img_src: "icons/Asana.svg",
     tooltip: "Asana",
   },
   {
+    id: 13,
     img_src: "icons/Figma.svg",
     tooltip: "Figma",
   },
   {
+    id: 14,
     img_src: "icons/Firebase.svg",
     tooltip: "Firebase",
   },
   {
+    id: 15,
     img_src: "icons/Material.svg",
     tooltip: "Material Design",
   },
   {
+    id: 16,
     img_src: "icons/Postman.svg",
     tooltip: "Postman",
   },
   {
+    id: 17,
     img_src: "icons/Python.svg",
     tooltip: "Python",
   },
   {
+    id: 18,
     img_src: "icons/Sass.svg",
     tooltip: "Sass: Syntactically Awesome Style Sheets",
   },
   {
+    id: 19,
     img_src: "icons/Wordpress.svg",
     tooltip: "Wordpress",
   },
@@ -95,6 +114,7 @@ const icons = [
 
 const cards = [
   {
+    id: 1,
     title: "CRM",
     description: "A CRM with ",
     img_src: "/logos/cog.svg",
@@ -103,6 +123,7 @@ const cards = [
     link: "/",
   },
   {
+    id: 2,
     title: "Pantro",
     description: "A Pantry app for your phone",
     img_src: "/logos/apple.svg",
@@ -111,6 +132,7 @@ const cards = [
     link: "/",
   },
   {
+    id: 3,
     title: "Petsave",
     description: "",
     img_src: "/logos/bone.svg",
@@ -119,6 +141,7 @@ const cards = [
     link: "/",
   },
   {
+    id: 4,
     title: "Poman",
     description: "",
     img_src: "/logos/spoon.svg",
@@ -127,6 +150,7 @@ const cards = [
     link: "/",
   },
   {
+    id: 5,
     title: "Get'em",
     description: "",
     img_src: "/logos/truck.svg",
@@ -210,6 +234,7 @@ export default function Home() {
                 link={o.link}
                 github_src={github_src}
                 link_src={link_src}
+                key={o.id}
               />
             );
           })}
