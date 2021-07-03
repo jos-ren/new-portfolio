@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.img`
-  width: calc(25% - 20px);
+  width: calc(33% - 20px);
   object-fit: contain;
   margin:10px;
   border-radius:10px;

@@ -10,7 +10,7 @@ const Main = styled.div`
 `;
 
 const Center = styled.div`
-  width: 60vw;
+max-width: 960px;
   // border: 1px solid red;
 `;
 

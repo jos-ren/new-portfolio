@@ -1,28 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const Container = styled.div`
   // border: 1px solid red;
-  width:375px;
-  margin:10px;
+  width: 375px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   min-height: 220px;
   padding: 24px;
-  background: var(--darkgray);
+  background: var(--secondary-bg);
   border-radius: 4px;
   transition: 0.25s;
   :hover {
-    background: var(--black);
-    cursor:pointer;
+    background: var(--secondary-bg-hover);
+    cursor: pointer;
   }
 `;
 
-const Card = ({ title, description, img_url }) => {
+const Card = ({ title, description, href, img_src }) => {
   return (
-    <Container>
-      <div>{title}</div>
-      <div>{description}</div>
-      {/* <img src={img_url} /> */}
-    </Container>
+    <Link href={href}>
+      <Container>
+        <img src={img_src} />
+        <h1>{title}</h1>
+        <p>{description}</p>
+      </Container>
+    </Link>
   );
 };
 
