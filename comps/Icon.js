@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Image from "next/image";
 
 const Container = styled.div`
   min-width: 66px;
@@ -42,7 +43,7 @@ const Container = styled.div`
     border-right: 10px solid transparent;
     border-top: 10px solid var(--secondary-bg-hover);
   }
-  img {
+  nth-child(2) {
     width: 60%;
     height: 60%;
     -drag: none;
@@ -70,7 +71,7 @@ const Icon = ({ img_src, tooltip }) => {
         {tooltip}
         <div className="tooltip_arrow"></div>
       </p>
-      <img src={img_src} />
+      <Image width={40} height={40} src={img_src} />
     </Container>
   );
 };

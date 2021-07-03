@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Image from "next/image";
 
 const Container = styled.button`
   border: 0;
@@ -31,7 +32,7 @@ const IconButton = ({ img_src, href }) => {
   return (
     <a target="_blank" href={href}>
       <Container>
-        <img src={img_src} />
+        <Image width={20} height={20} src={img_src} />
       </Container>
     </a>
   );

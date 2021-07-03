@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../comps/Button.js";
 import IconButton from "../comps/IconButton.js";
+import Image from "next/image";
 
 const Container = styled.div`
   // border: 1px solid red;
@@ -33,7 +34,7 @@ const Circle = styled.div`
   background: var(--bg);
   border-radius: 50%;
   margin-right: 15px;
-  img {
+  * {
     width: 28px;
     height: 28px;
     // border:1px solid red;
@@ -70,7 +71,7 @@ const Card = ({
     <Container>
       <Top>
         <Circle>
-          <img src={img_src} />
+          <Image width={20} height={20} src={img_src} />
         </Circle>
         <h1>{title}</h1>
       </Top>
