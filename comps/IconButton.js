@@ -1,25 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "next/link";
 
 const Container = styled.button`
   border: 0;
   border-radius: 4px;
   height: 45px;
-  width: 45px;
+  min-width: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: var(--secondary-bg);
   transition: background-color 0.2s ease-in;
   cursor: pointer;
   color: var(--headings);
-  focus {
+  :focus {
     border: 2px solid var(--headings);
   }
-  hover,
-  active {
-      border:1px solid red;
+  :hover,
+  :active {
     background-color: var(--secondary-bg-hover);
     outline: none;
   }
@@ -31,11 +29,11 @@ const Container = styled.button`
 
 const IconButton = ({ img_src, href }) => {
   return (
-    <Link href={href}>
+    <a target="_blank" href={href}>
       <Container>
         <img src={img_src} />
       </Container>
-    </Link>
+    </a>
   );
 };
 

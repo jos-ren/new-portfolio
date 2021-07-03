@@ -99,7 +99,7 @@ const cards = [
     description: "A CRM with ",
     img_src: "/logos/cog.svg",
     href: "/projects/crm",
-    github_link: "/",
+    github_link: "https://www.w3schools.com/cssref/sel_nth-child.asp",
     link: "/",
   },
   {
@@ -167,9 +167,12 @@ const Apps = styled.div`
 `;
 
 export default function Home() {
-  //add all adobe stuiff as icons
-  //creative tooltip
+  //add all adobe stuff as icons
   //animations when clicking arrows
+  //if github/links are empty display:none;
+  //write descriptions for cards
+  //desktop screenshots
+  //gradient buttons
 
   const colorTheme = useColorTheme("dark-theme", {
     classNames: ["light-theme", "dark-theme"],

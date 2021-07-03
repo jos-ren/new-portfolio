@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const Container = styled.button`
   border: 0;
@@ -29,11 +30,13 @@ const Container = styled.button`
   }
 `;
 
-const Button = ({ text }) => {
+const Button = ({ text, href }) => {
   return (
-    <Container>
-      <p>{text}</p>
-    </Container>
+    <Link href={href}>
+      <Container>
+        <p>{text}</p>
+      </Container>
+    </Link>
   );
 };
 

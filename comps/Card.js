@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "next/link";
 import Button from "../comps/Button.js";
 import IconButton from "../comps/IconButton.js";
 
@@ -16,8 +15,7 @@ const Container = styled.div`
   transition: 0.25s;
   position: relative;
   :hover {
-    background: var(--secondary-bg-hover);
-    cursor: pointer;
+    background: var(--background);
   }
 `;
 
@@ -51,7 +49,7 @@ const Bottom = styled.div`
   bottom: 20px;
   button:nth-child(1) {
     margin-right: 10px;
-    width:70%;
+    width: 70%;
   }
   button:nth-child(2) {
     margin-right: 10px;
@@ -69,22 +67,20 @@ const Card = ({
   github_src,
 }) => {
   return (
-    <Link href={href}>
-      <Container>
-        <Top>
-          <Circle>
-            <img src={img_src} />
-          </Circle>
-          <h1>{title}</h1>
-        </Top>
-        <p>{description}</p>
-        <Bottom>
-          <Button text="See Project" />
-          <IconButton href={github_link} img_src={github_src} />
-          <IconButton href={link} img_src={link_src} />
-        </Bottom>
-      </Container>
-    </Link>
+    <Container>
+      <Top>
+        <Circle>
+          <img src={img_src} />
+        </Circle>
+        <h1>{title}</h1>
+      </Top>
+      <p>{description}</p>
+      <Bottom>
+        <Button text="See Project" href={href} />
+        <IconButton href={github_link} img_src={github_src} />
+        <IconButton href={link} img_src={link_src} />
+      </Bottom>
+    </Container>
   );
 };
 
