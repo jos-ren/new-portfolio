@@ -10,27 +10,33 @@ const Main = styled.div`
 `;
 
 const Center = styled.div`
-max-width: 960px;
+  max-width: 960px;
   // border: 1px solid red;
 `;
 
 const screenshots = [
   {
+    id: 1,
     img_url: "../screenshots/pantro/4.png",
   },
   {
+    id: 2,
     img_url: "../screenshots/pantro/3.png",
   },
   {
+    id: 3,
     img_url: "../screenshots/pantro/1.png",
   },
   {
+    id: 4,
     img_url: "../screenshots/pantro/2.png",
   },
   {
+    id: 5,
     img_url: "../screenshots/pantro/6.png",
   },
   {
+    id: 6,
     img_url: "../screenshots/pantro/5.png",
   },
 ];
@@ -45,12 +51,8 @@ export default function Pantro() {
           <link href="" />
         </Head>
         {screenshots.map((o) => {
-            return (
-              <PhoneSS 
-                img_url={o.img_url}
-              />
-            );
-          })}
+          return <PhoneSS key={o.id} img_url={o.img_url} />;
+        })}
       </Center>
     </Main>
   );

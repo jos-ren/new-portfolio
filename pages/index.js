@@ -226,6 +226,7 @@ export default function Home() {
           {cards.map((o) => {
             return (
               <Card
+                key={o.id}
                 title={o.title}
                 img_src={o.img_src}
                 description={o.description}
@@ -234,7 +235,6 @@ export default function Home() {
                 link={o.link}
                 github_src={github_src}
                 link_src={link_src}
-                key={o.id}
               />
             );
           })}
@@ -242,7 +242,7 @@ export default function Home() {
         <h1>Skills</h1>
         <Apps>
           {icons.map((o) => {
-            return <Icon tooltip={o.tooltip} img_src={o.img_src} key={o.id} />;
+            return <Icon key={o.id} tooltip={o.tooltip} img_src={o.img_src} />;
           })}
         </Apps>
       </Center>
