@@ -30,7 +30,7 @@ const Container = styled.button`
 
 const IconButton = ({ img_src, href }) => {
   return (
-    <a target="_blank" href={href}>
+    <a target="_blank" href={href} passHref>
       <Container>
         <Image width={20} height={20} src={img_src} />
       </Container>
