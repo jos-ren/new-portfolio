@@ -16,7 +16,6 @@ const Container = styled.div`
   position: relative;
   :hover {
     // background: var(--secondary-bg-hover);
-    // cursor:url(/icons/question.png), auto;
     cursor: pointer;
   }
   .tooltip {
