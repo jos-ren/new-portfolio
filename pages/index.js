@@ -17,97 +17,97 @@ import useColorTheme from "use-color-theme";
 const icons = [
   {
     id: 1,
-    img_src: "/icons/AWS.svg",
+    img_src: "/logos/AWS.svg",
     tooltip: "AWS (DynamoDB, SES, SMS, S3)",
   },
   {
     id: 2,
-    img_src: "/icons/React.svg",
+    img_src: "/logos/React.svg",
     tooltip: "React",
   },
   {
     id: 3,
-    img_src: "/icons/Javascript.svg",
+    img_src: "/logos/Javascript.svg",
     tooltip: "Javascript",
   },
   {
     id: 4,
-    img_src: "/icons/PHP.svg",
+    img_src: "/logos/PHP.svg",
     tooltip: "PHP",
   },
   {
     id: 5,
-    img_src: "/icons/MySql.svg",
+    img_src: "/logos/MySql.svg",
     tooltip: "MySql",
   },
   {
     id: 6,
-    img_src: "/icons/PostgreSQL.svg",
+    img_src: "/logos/PostgreSQL.svg",
     tooltip: "PostgreSQL",
   },
   {
     id: 7,
-    img_src: "/icons/NextJS.svg",
+    img_src: "/logos/NextJS.svg",
     tooltip: "NextJS",
   },
   {
     id: 8,
-    img_src: "/icons/NodeJS.svg",
+    img_src: "/logos/NodeJS.svg",
     tooltip: "NodeJS",
   },
   {
     id: 9,
-    img_src: "/icons/HTML.svg",
+    img_src: "/logos/HTML.svg",
     tooltip: "HTML",
   },
   {
     id: 10,
-    img_src: "/icons/CSS.svg",
+    img_src: "/logos/CSS.svg",
     tooltip: "CSS: Cascaded Style Sheets",
   },
   {
     id: 11,
-    img_src: "/icons/Adobe.svg",
+    img_src: "/logos/Adobe.svg",
     tooltip: "Adobe Creative Suite",
   },
   {
     id: 12,
-    img_src: "/icons/Asana.svg",
+    img_src: "/logos/Asana.svg",
     tooltip: "Asana",
   },
   {
     id: 13,
-    img_src: "/icons/Figma.svg",
+    img_src: "/logos/Figma.svg",
     tooltip: "Figma",
   },
   {
     id: 14,
-    img_src: "/icons/Firebase.svg",
+    img_src: "/logos/Firebase.svg",
     tooltip: "Firebase",
   },
   {
     id: 15,
-    img_src: "/icons/Material.svg",
+    img_src: "/logos/Material.svg",
     tooltip: "Material Design",
   },
   {
     id: 16,
-    img_src: "/icons/Postman.svg",
+    img_src: "/logos/Postman.svg",
     tooltip: "Postman",
   },
   {
     id: 17,
-    img_src: "/icons/Python.svg",
+    img_src: "/logos/Python.svg",
     tooltip: "Python",
   },
   {
     id: 18,
-    img_src: "/icons/Sass.svg",
+    img_src: "/logos/Sass.svg",
     tooltip: "Sass: Syntactically Awesome Style Sheets",
   },
   {
     id: 19,
-    img_src: "/icons/Wordpress.svg",
+    img_src: "/logos/Wordpress.svg",
     tooltip: "Wordpress",
   },
 ];
@@ -205,11 +205,11 @@ export default function Home() {
   let github_src = "";
   let link_src = "";
   if (colorTheme.value === "light-theme") {
-    github_src = "/icons/github.svg";
-    link_src = "/icons/link.svg";
+    github_src = "/logos/github.svg";
+    link_src = "/logos/link.svg";
   } else if (colorTheme.value === "dark-theme") {
-    github_src = "/icons/github_w.svg";
-    link_src = "/icons/link_w.svg";
+    github_src = "/logos/github_w.svg";
+    link_src = "/logos/link_w.svg";
   }
 
   return (
