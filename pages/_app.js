@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import useColorTheme from "use-color-theme";
 import Link from "next/link";
 import Image from "next/image";
+import React from "react";
 
 export const MyApp = ({ Component, pageProps }) => {
   const colorTheme = useColorTheme("dark-theme", {
@@ -11,11 +12,11 @@ export const MyApp = ({ Component, pageProps }) => {
   let icon = "";
   let logo = "";
   if (colorTheme.value === "light-theme") {
-    icon = "/logos/moon.png";
-    logo = "/logos/josren.svg";
+    icon = "/icons/moon.png";
+    logo = "/icons/josren.svg";
   } else if (colorTheme.value === "dark-theme") {
-    icon = "/logos/sun.svg";
-    logo = "/logos/josren_w.svg";
+    icon = "/icons/sun.svg";
+    logo = "/icons/josren_w.svg";
   }
   // console.log(icon, "icon");
 
