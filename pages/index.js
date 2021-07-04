@@ -224,7 +224,7 @@ export default function Home() {
           <link rel="icon" href="/logos/josren.svg" />
         </Head>
         <Top>
-          <Image src="/logos/josren_w.svg" width={50} height={50}/>
+          <Image src="/logos/aws.svg" width={50} height={50}/>
         </Top>
         <h1>Projects</h1>
         <Projects>
