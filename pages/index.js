@@ -299,17 +299,17 @@ export default function Home() {
           {icons.map((o) => {
             return (
               <IconCont
-                onMouseEnter={(e) => {
-                  setStyle({ display: "flex" });
-                }}
-                onMouseLeave={(e) => {
-                  setStyle({ display: "none" });
-                }}
+                // onMouseEnter={(e) => {
+                //   setStyle({ display: "flex" });
+                // }}
+                // onMouseLeave={(e) => {
+                //   setStyle({ display: "none" });
+                // }}
               >
-                <Tooltip style={style}>
+                {/* <Tooltip style={style}>
                   <p >{o.tooltip}</p>
                   <TooltipArrow />
-                </Tooltip>
+                </Tooltip> */}
                 <Image key={o.id} width={40} height={40} src={o.img_src} />
               </IconCont>
             );
