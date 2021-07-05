@@ -298,7 +298,7 @@ export default function Home() {
         <Apps>
           {icons.map((o) => {
             return (
-              <IconCont
+              <IconCont key={o.id}
                 // onMouseEnter={(e) => {
                 //   setStyle({ display: "flex" });
                 // }}
@@ -310,7 +310,7 @@ export default function Home() {
                   <p >{o.tooltip}</p>
                   <TooltipArrow />
                 </Tooltip> */}
-                <Image key={o.id} width={40} height={40} src={o.img_src} />
+                <Image  width={40} height={40} src={o.img_src} />
               </IconCont>
             );
           })}
