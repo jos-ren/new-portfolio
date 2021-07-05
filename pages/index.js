@@ -306,10 +306,10 @@ export default function Home() {
                   setStyle({ display: "none" });
                 }}
               >
-                <Tooltip style={style}>
-                  <p>{o.tooltip}</p>
+                {/* <Tooltip style={style}>
+                  <p >{o.tooltip}</p>
                   <TooltipArrow />
-                </Tooltip>
+                </Tooltip> */}
                 <Image key={o.id} width={40} height={40} src={o.img_src} />
               </IconCont>
             );
