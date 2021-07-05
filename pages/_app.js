@@ -37,11 +37,11 @@ export const MyApp = ({ Component, pageProps }) => {
                 <div>Home</div>
               </div>
             </Link>
-            <Link href="/about">
+            {/* <Link href="/about">
               <div className="link">
                 <div>About</div>
               </div>
-            </Link>
+            </Link> */}
             <Link href="/resume">
               <div className="link">
                 <div>Resume</div>

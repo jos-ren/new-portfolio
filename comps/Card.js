@@ -3,12 +3,12 @@ import styled from "styled-components";
 import Button from "../comps/Button.js";
 import IconButton from "../comps/IconButton.js";
 import Image from "next/image";
+import Link from "next/link";
 
 const Container = styled.div`
   // border: 1px solid red;
-  width: 375px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   height: 240px;
   padding: 24px;
   background: var(--secondary-bg);
@@ -16,13 +16,14 @@ const Container = styled.div`
   transition: 0.25s;
   position: relative;
   :hover {
-    background: var(--background);
+    // background: var(--background);
   }
 `;
 
 const Top = styled.div`
   display: flex;
   flex-direction: row;
+  width: 300px;
 `;
 
 const Circle = styled.div`
@@ -77,7 +78,9 @@ const Card = ({
       </Top>
       <p>{description}</p>
       <Bottom>
-        <Button text="See Project" href={href} />
+        <Link href={href}>
+          <Button text="See Project" width="5px" onClick=""/>
+        </Link>
         <IconButton href={github_link} img_src={github_src} />
         <IconButton href={link} img_src={link_src} />
       </Bottom>

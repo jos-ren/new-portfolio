@@ -1,9 +1,10 @@
 import Head from "next/head";
 import styled from "styled-components";
 import Card from "../comps/Card";
-import Icon from "../comps/Icon";
+import Profile from "../comps/Profile";
 import useColorTheme from "use-color-theme";
 import Image from "next/image";
+import React, { useState } from "react";
 
 // --gutterSpace: 32px;
 // --screenXs: 576px;
@@ -117,47 +118,47 @@ const cards = [
   {
     id: 1,
     title: "CRM",
-    description: "A CRM with ",
+    description: "A CRM with the options to text, email, and send updates to contacts",
     img_src: "/icons/cog.svg",
     href: "/projects/crm",
-    github_link: "https://www.w3schools.com/cssref/sel_nth-child.asp",
-    link: "/",
+    github_link: "https://github.com/HenryBcit/BBoT",
+    link: "https://crm.techiesoftomorrow.com/",
   },
   {
     id: 2,
-    title: "Pantro",
-    description: "A Pantry app for your phone",
-    img_src: "/icons/apple.svg",
-    href: "/projects/pantro",
-    github_link: "/",
-    link: "/",
+    title: "Petsave",
+    description: "A social media app for animal rehabilitation centers",
+    img_src: "/icons/bone.svg",
+    href: "/projects/petsave",
+    github_link: "https://github.com/jos-ren/petsave-frontend",
+    link: null,
   },
   {
     id: 3,
-    title: "Petsave",
-    description: "",
-    img_src: "/icons/bone.svg",
-    href: "/projects/petsave",
-    github_link: "/",
-    link: "/",
+    title: "Pantro",
+    description: "A pantry app which tracks food expiration dates",
+    img_src: "/icons/apple.svg",
+    href: "/projects/pantro",
+    github_link: "https://github.com/jos-ren/bcitd3_pantro",
+    link: null,
   },
   {
     id: 4,
     title: "Poman",
-    description: "",
+    description: "A foodie social network app",
     img_src: "/icons/spoon.svg",
     href: "/projects/poman",
     github_link: "/",
-    link: "/",
+    link: null,
   },
   {
     id: 5,
     title: "Get'em",
-    description: "",
+    description: "An app for the delivery of everyday items",
     img_src: "/icons/truck.svg",
     href: "/projects/getem",
     github_link: "/",
-    link: "/",
+    link: null,
   },
 ];
 
@@ -171,34 +172,84 @@ const Center = styled.div`
   max-width: 960px;
   padding: 0 32px;
   margin: 0 auto;
-  border: 1px solid red;
+  // border: 1px solid red;
 `;
 
 const Top = styled.div`
   // border: 1px solid red;
-  height: 60vh;
+  // height: 500px;
+  margin-bottom: 20px;
 `;
 
 const Projects = styled.div`
   // border: 1px solid blue;
-  height: 30vh;
-  display: inline-flex;
+  // height: 30vh;
+  display: flex;
+  margin-bottom: 20px;
+  overflow-x: scroll;
 `;
 
 const Apps = styled.div`
   // border: 1px solid green;
   height: 10vh;
   display: flex;
+  overflow-x: auto;
+`;
+
+const IconCont = styled.div`
+  min-width: 66px;
+  height: 66px;
+  margin-right: 20px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary-bg);
+  border-radius: 4px;
+  transition: 0.25s;
+  position: relative;
+  :hover {
+    // background: var(--secondary-bg-hover);
+    cursor: pointer;
+  }
+`;
+
+const Tooltip = styled.div`
+  position: absolute;
+  bottom: 75px;
+  max-width: 250px;
+  min-width: 150px;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  background: var(--secondary-bg-hover);
+  border-radius: 4px;
+  padding: 5px;
+`;
+
+const TooltipArrow = styled.div`
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--secondary-bg-hover);
 `;
 
 export default function Home() {
-  
+
   //add all adobe stuff as icons
   //animations when clicking arrows
   //if github/links are empty display:none;
   //write descriptions for cards
   //desktop screenshots
   //gradient buttons
+
+  const [style, setStyle] = useState({ display: "none" });
 
   const colorTheme = useColorTheme("dark-theme", {
     classNames: ["light-theme", "dark-theme"],
@@ -223,7 +274,7 @@ export default function Home() {
           <link rel="icon" href="/icons/logo.png" />
         </Head>
         <Top>
-          {/* <Image src="/icons/aws.svg" width={50} height={50}/> */}
+          <Profile />
         </Top>
         <h1>Projects</h1>
         <Projects>
@@ -246,7 +297,22 @@ export default function Home() {
         <h1>Skills</h1>
         <Apps>
           {icons.map((o) => {
-            return <Icon key={o.id} tooltip={o.tooltip} img_src={o.img_src} />;
+            return (
+              <IconCont
+                onMouseEnter={(e) => {
+                  setStyle({ display: "flex" });
+                }}
+                onMouseLeave={(e) => {
+                  setStyle({ display: "none" });
+                }}
+              >
+                <Tooltip style={style}>
+                  <p>{o.tooltip}</p>
+                  <TooltipArrow />
+                </Tooltip>
+                <Image key={o.id} width={40} height={40} src={o.img_src} />
+              </IconCont>
+            );
           })}
         </Apps>
       </Center>

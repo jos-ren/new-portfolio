@@ -6,6 +6,7 @@ const Container = styled.img`
   object-fit: contain;
   margin:10px;
   border-radius:10px;
+  border:1px solid var(--secondary-bg);
 `;
 
 const PhoneSS = ({ img_url }) => {
