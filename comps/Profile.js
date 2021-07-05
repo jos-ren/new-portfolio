@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
+import Header from "./Header.js"
 
 const Container = styled.div`
   border-radius: 4px;
@@ -24,26 +25,15 @@ const Container = styled.div`
 //   //   }
 // `;
 
-const Header = styled.h1`
-  font-size: 144pt;
-  left: -20px;
-  position: relative;
-  margin: 0px;
-  padding: 0px;
-  line-height: 220px;
-  // border: 1px solid red;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
+
 
 const PhoneSS = ({}) => {
   return (
     <Container>
-      <Header>Hello</Header>
+      <Header text="Hello"/>
       <h1> I'm Josh Renema</h1>
       <p>
-        I’m a Full Stack Developer as well as a Designer, currently living in
+        I’m a Full Stack Developer and Designer, currently living in
         Surrey, Canada. I enjoy creating projects that live on the internet,
         whether that be websites, applications, or anything in between. I always
         strive for my projects to provide real world value.
