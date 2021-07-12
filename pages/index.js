@@ -293,7 +293,7 @@ export default function Home() {
           </p>
           <p>
             I’m currently working as a Full Stack Developer at{" "}
-            <a target="_blank" href="https://techiesoftomorrow.com/">
+            <a target="_blank" rel="noopener noreferrer" href="https://techiesoftomorrow.com/">
               Techies of Tommorow
             </a>
             , a tech talent incubator that empowers recent BC tech graduates to
