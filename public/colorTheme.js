@@ -5,7 +5,7 @@
 
   var storageKey = "colorTheme";
 
-  var classNames = ["light-theme", "dark-theme", "funky"];
+  var classNames = ["light-theme", "dark-theme"];
 
   function setClassOnDocumentBody(colorTheme) {
     var theme = "light-theme";
@@ -31,6 +31,7 @@
 
   try {
     localStorageTheme = localStorage.getItem(storageKey);
+    console.log("local", localStorageTheme)
   } catch (err) {}
 
   var localStorageExists = localStorageTheme !== null;

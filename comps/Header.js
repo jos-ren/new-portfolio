@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 const Container = styled.h1`
   font-size: 144pt;
-  left: -20px;
+  //   left: -20px;
+  margin-left: ${props => props.margin ? "20px" : "0px"};
   position: relative;
   margin: 0px;
   padding: 0px;
@@ -14,8 +15,8 @@ const Container = styled.h1`
   -webkit-text-fill-color: transparent;
 `;
 
-const PhoneSS = ({ text }) => {
-  return <Container>{text}</Container>;
+const PhoneSS = ({ text, margin }) => {
+  return <Container margin={true}>{text}</Container>;
 };
 
 export default PhoneSS;

@@ -164,3 +164,7 @@ a{
   display: flex;
   flex-direction:row;
 }
+
+.margin_header{
+  margin-left:-20px;
+}

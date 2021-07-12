@@ -47,17 +47,17 @@ export default function Resume() {
       </Head>
       <div>
         <Download>
-          <a href="resume.pdf" download="josh_renema_resume">
+          <a href="josh_renema_resume.pdf" download="josh_renema_resume">
             <Button text="Download Resume" width="100px" />
           </a>
         </Download>
         <ResumeCont>
-          <Document file="resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+          <Document file="josh_renema_resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
             <Page pageNumber={pageNumber} width={958} />
           </Document>
         </ResumeCont>
         <Download>
-          <a href="resume.pdf" download="josh_renema_resume">
+          <a href="josh_renema_resume.pdf" download="josh_renema_resume">
             <Button text="Download Resume" width="100px" />
           </a>
         </Download>

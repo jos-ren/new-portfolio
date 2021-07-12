@@ -1,10 +1,10 @@
 import Head from "next/head";
 import styled from "styled-components";
 import Card from "../comps/Card";
-import Profile from "../comps/Profile";
 import useColorTheme from "use-color-theme";
 import Image from "next/image";
 import React, { useState } from "react";
+import Header from "../comps/Header";
 
 // --gutterSpace: 32px;
 // --screenXs: 576px;
@@ -118,7 +118,8 @@ const cards = [
   {
     id: 1,
     title: "CRM",
-    description: "A CRM with the options to text, email, and send updates to contacts",
+    description:
+      "A CRM with the options to text, email, and send updates to contacts",
     img_src: "/icons/cog.svg",
     href: "/projects/crm",
     github_link: "https://github.com/HenryBcit/BBoT",
@@ -214,42 +215,43 @@ const IconCont = styled.div`
   }
 `;
 
-const Tooltip = styled.div`
-  position: absolute;
-  bottom: 75px;
-  max-width: 250px;
-  min-width: 150px;
-  color: var(--text);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 1;
-  background: var(--secondary-bg-hover);
-  border-radius: 4px;
-  padding: 5px;
-`;
+// const Tooltip = styled.div`
+//   position: absolute;
+//   top: -75px;
+//   max-width: 250px;
+//   min-width: 150px;
+//   color: var(--text);
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   z-index: 1;
+//   background: var(--secondary-bg-hover);
+//   border-radius: 4px;
+//   padding: 5px;
+//   display:flex;
+// `;
 
-const TooltipArrow = styled.div`
-  position: absolute;
-  bottom: -10px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid var(--secondary-bg-hover);
-`;
+// const TooltipArrow = styled.div`
+//   position: absolute;
+//   bottom: -10px;
+//   width: 0;
+//   height: 0;
+//   border-left: 10px solid transparent;
+//   border-right: 10px solid transparent;
+//   border-top: 10px solid var(--secondary-bg-hover);
+// `;
 
 export default function Home() {
-
   //add all adobe stuff as icons
   //animations when clicking arrows
   //if github/links are empty display:none;
   //write descriptions for cards
   //desktop screenshots
   //gradient buttons
+  //color anchor tags
+  //margin on header comp
 
-  const [style, setStyle] = useState({ display: "none" });
+  const [style, setStyle] = useState({ display: "flex" });
 
   const colorTheme = useColorTheme("dark-theme", {
     classNames: ["light-theme", "dark-theme"],
@@ -274,7 +276,39 @@ export default function Home() {
           <link rel="icon" href="/icons/logo.png" />
         </Head>
         <Top>
-          <Profile />
+          <div className="margin_header">
+            <Header text="Hello" />
+          </div>
+          <h1> I'm Josh Renema</h1>
+          <p>
+            I’m a Full Stack Developer and Designer, currently living in Surrey,
+            Canada. I enjoy creating projects that live on the internet, whether
+            that be websites, applications, or anything in between. I always
+            strive for my projects to provide real world value.
+          </p>
+          <p>
+            I’ve just wrapped up my diploma at the Digital Design and
+            Development program at BCIT, where I’ve learned how to develop and
+            design responsive, cross-platform applications.
+          </p>
+          <p>
+            I’m currently working as a Full Stack Developer at{" "}
+            <a target="_blank" href="https://techiesoftomorrow.com/">
+              Techies of Tommorow
+            </a>
+            , a tech talent incubator that empowers recent BC tech graduates to
+            work on real industry projects that require high-quality and
+            cost-effective solutions.
+          </p>
+          <p>
+            When I’m not spending my days coding and designing, you’ll probably
+            find me riding my jeep out in the mountains, trying out new food
+            with friends, or testing out my Nikon film camera. Feel free to
+            checkout my projects below or browse to your heart's content!
+          </p>
+          {/* <ImgCont>
+        <Image src="/profile.jpg" width={300} height={300} />
+      </ImgCont> */}
         </Top>
         <h1>Projects</h1>
         <Projects>
@@ -298,19 +332,12 @@ export default function Home() {
         <Apps>
           {icons.map((o) => {
             return (
-              <IconCont key={o.id}
-                // onMouseEnter={(e) => {
-                //   setStyle({ display: "flex" });
-                // }}
-                // onMouseLeave={(e) => {
-                //   setStyle({ display: "none" });
-                // }}
-              >
-                {/* <Tooltip style={style}>
-                  <p >{o.tooltip}</p>
+              <IconCont key={o.id}>
+                {/* <Tooltip>
+                  <p>{o.tooltip}</p>
                   <TooltipArrow />
                 </Tooltip> */}
-                <Image  width={40} height={40} src={o.img_src} />
+                <Image width={40} height={40} src={o.img_src} />
               </IconCont>
             );
           })}

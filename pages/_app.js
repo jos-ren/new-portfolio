@@ -4,8 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
+if (typeof window !== 'undefined' && localStorage.colorTheme !== '"light-theme"') {
+  localStorage.setItem("colorTheme", '"dark-theme"');
+  // console.log(localStorage.colorTheme)
+} else if (typeof window !== 'undefined' && localStorage.colorTheme !== '"dark-theme"'){
+  localStorage.setItem("colorTheme", '"light-theme"');
+  // console.log(localStorage.colorTheme)
+}
+
 export const MyApp = ({ Component, pageProps }) => {
-  const colorTheme = useColorTheme("dark-theme", {
+  const colorTheme = useColorTheme("light-theme", {
     classNames: ["light-theme", "dark-theme"],
   });
   //change theme icon depending on theme
@@ -18,7 +26,6 @@ export const MyApp = ({ Component, pageProps }) => {
     icon = "/icons/sun.svg";
     logo = "/icons/josren_w.svg";
   }
-  // console.log(icon, "icon");
 
   return (
     <div>
@@ -48,12 +55,7 @@ export const MyApp = ({ Component, pageProps }) => {
               </div>
             </Link>
             <button className="toggle" onClick={colorTheme.toggle}>
-              <Image
-                width={20}
-                height={20}
-                className="toggle_img"
-                src={icon}
-              />
+              <Image width={20} height={20} className="toggle_img" src={icon} />
             </button>
           </div>
         </nav>
