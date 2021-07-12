@@ -279,9 +279,9 @@ export default function Home() {
           <div className="margin_header">
             <Header text="Hello" />
           </div>
-          <h1> I'm Josh Renema</h1>
+          <h1>I&apos;m Josh Renema</h1>
           <p>
-            I’m a Full Stack Developer and Designer, currently living in Surrey,
+            I&apos;m a Full Stack Developer and Designer, currently living in Surrey,
             Canada. I enjoy creating projects that live on the internet, whether
             that be websites, applications, or anything in between. I always
             strive for my projects to provide real world value.
@@ -304,7 +304,7 @@ export default function Home() {
             When I’m not spending my days coding and designing, you’ll probably
             find me riding my jeep out in the mountains, trying out new food
             with friends, or testing out my Nikon film camera. Feel free to
-            checkout my projects below or browse to your heart's content!
+            checkout my projects below or browse to your heart&apos;s content!
           </p>
           {/* <ImgCont>
         <Image src="/profile.jpg" width={300} height={300} />
