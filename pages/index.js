@@ -5,6 +5,7 @@ import useColorTheme from "use-color-theme";
 import Image from "next/image";
 import React, { useState } from "react";
 import Header from "../comps/Header";
+import Carousel from "react-elastic-carousel";
 
 // --gutterSpace: 32px;
 // --screenXs: 576px;
@@ -185,16 +186,23 @@ const Top = styled.div`
 const Projects = styled.div`
   // border: 1px solid blue;
   // height: 30vh;
+  width: calc(100% + 150px);
   display: flex;
   margin-bottom: 20px;
-  overflow-x: scroll;
-`;
-
-const Apps = styled.div`
+  overflow-x: hidden;
+  position: relative;
+  right: 62px;
+  `;
+  
+  const Apps = styled.div`
   // border: 1px solid green;
   height: 10vh;
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
+  width: calc(100% + 150px);
+  position: relative;
+  right: 62px;
+  overflow-y: hidden;
 `;
 
 const IconCont = styled.div`
@@ -281,10 +289,10 @@ export default function Home() {
           </div>
           <h1>I&apos;m Josh Renema</h1>
           <p>
-            I&apos;m a Full Stack Developer and Designer, currently living in Surrey,
-            Canada. I enjoy creating projects that live on the internet, whether
-            that be websites, applications, or anything in between. I always
-            strive for my projects to provide real world value.
+            I&apos;m a Full Stack Developer and Designer, currently living in
+            Surrey, Canada. I enjoy creating projects that live on the internet,
+            whether that be websites, applications, or anything in between. I
+            always strive for my projects to provide real world value.
           </p>
           <p>
             I’ve just wrapped up my diploma at the Digital Design and
@@ -293,7 +301,11 @@ export default function Home() {
           </p>
           <p>
             I’m currently working as a Full Stack Developer at{" "}
-            <a target="_blank" rel="noopener noreferrer" href="https://techiesoftomorrow.com/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://techiesoftomorrow.com/"
+            >
               Techies of Tommorow
             </a>
             , a tech talent incubator that empowers recent BC tech graduates to
@@ -312,35 +324,39 @@ export default function Home() {
         </Top>
         <h1>Projects</h1>
         <Projects>
-          {cards.map((o) => {
-            return (
-              <Card
-                key={o.id}
-                title={o.title}
-                img_src={o.img_src}
-                description={o.description}
-                href={o.href}
-                github_link={o.github_link}
-                link={o.link}
-                github_src={github_src}
-                link_src={link_src}
-              />
-            );
-          })}
+          <Carousel itemsToShow={2.3} itemsToScroll={1}>
+            {cards.map((o) => {
+              return (
+                <Card
+                  key={o.id}
+                  title={o.title}
+                  img_src={o.img_src}
+                  description={o.description}
+                  href={o.href}
+                  github_link={o.github_link}
+                  link={o.link}
+                  github_src={github_src}
+                  link_src={link_src}
+                />
+              );
+            })}
+          </Carousel>
         </Projects>
         <h1>Skills</h1>
         <Apps>
-          {icons.map((o) => {
-            return (
-              <IconCont key={o.id}>
-                {/* <Tooltip>
+          <Carousel itemsToShow={11}>
+            {icons.map((o) => {
+              return (
+                <IconCont key={o.id}>
+                  {/* <Tooltip>
                   <p>{o.tooltip}</p>
                   <TooltipArrow />
                 </Tooltip> */}
-                <Image width={40} height={40} src={o.img_src} />
-              </IconCont>
-            );
-          })}
+                  <Image width={40} height={40} src={o.img_src} />
+                </IconCont>
+              );
+            })}
+          </Carousel>
         </Apps>
       </Center>
     </Main>

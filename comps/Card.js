@@ -15,6 +15,7 @@ const Container = styled.div`
   border-radius: 4px;
   transition: 0.25s;
   position: relative;
+  width: 100%;
   :hover {
     // background: var(--background);
   }
@@ -23,7 +24,7 @@ const Container = styled.div`
 const Top = styled.div`
   display: flex;
   flex-direction: row;
-  width: 300px;
+  // width: 50%;
 `;
 
 const Circle = styled.div`
