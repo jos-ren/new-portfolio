@@ -54,6 +54,9 @@ export const MyApp = ({ Component, pageProps }) => {
                 <div>Resume</div>
               </div>
             </Link>
+            <button className="toggle" onClick={colorTheme.toggle} style={{marginRight: "20px"}}>
+              <Image width={20} height={20} className="toggle_img" src={icon} />
+            </button>
             <button className="toggle" onClick={colorTheme.toggle}>
               <Image width={20} height={20} className="toggle_img" src={icon} />
             </button>
@@ -61,6 +64,7 @@ export const MyApp = ({ Component, pageProps }) => {
         </nav>
       </header>
       <Component {...pageProps} />
+      <footer>hellooooo</footer>
     </div>
   );
 };

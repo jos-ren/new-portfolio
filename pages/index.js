@@ -7,16 +7,6 @@ import React, { useState } from "react";
 import Header from "../comps/Header";
 import Carousel from "react-elastic-carousel";
 
-// --gutterSpace: 32px;
-// --screenXs: 576px;
-// --screenXsMin: 575.98px;
-// --screenSm: 768px;
-// --screenSmMin: 767.98px;
-// --screenMd: 1024px;
-// --screenMdMin: 1023.98px;
-// --screenLg: 1168px;
-// --screenXl: 1472px;
-
 const icons = [
   {
     id: 1,
@@ -117,6 +107,16 @@ const icons = [
 
 const cards = [
   {
+    id: 0,
+    title: "Smart City Media",
+    description:
+      "loremj ipsum",
+    img_src: "/icons/cog.svg",
+    href: "/projects/crm",
+    github_link: "https://github.com/HenryBcit/BBoT",
+    link: "https://crm.techiesoftomorrow.com/",
+  },
+  {
     id: 1,
     title: "CRM",
     description:
@@ -193,8 +193,8 @@ const Projects = styled.div`
   position: relative;
   right: 62px;
   `;
-  
-  const Apps = styled.div`
+
+const Apps = styled.div`
   // border: 1px solid green;
   height: 10vh;
   display: flex;
@@ -287,20 +287,20 @@ export default function Home() {
           <div className="margin_header">
             <Header text="Hello" />
           </div>
-          <h1>I&apos;m Josh Renema</h1>
+          <h1>I'm Josh Renema</h1>
           <p>
-            I&apos;m a Full Stack Developer and Designer, currently living in
+            I'm a Full Stack Developer and Designer, currently living in
             Surrey, Canada. I enjoy creating projects that live on the internet,
             whether that be websites, applications, or anything in between. I
             always strive for my projects to provide real world value.
           </p>
           <p>
-            I’ve just wrapped up my diploma at the Digital Design and
-            Development program at BCIT, where I’ve learned how to develop and
+            I've just wrapped up my diploma at the Digital Design and
+            Development program at BCIT, where I've learned how to develop and
             design responsive, cross-platform applications.
           </p>
           <p>
-            I’m currently working as a Full Stack Developer at{" "}
+            I'm currently working as a Full Stack Developer at{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -308,15 +308,15 @@ export default function Home() {
             >
               Techies of Tommorow
             </a>
-            , a tech talent incubator that empowers recent BC tech graduates to
+            , a tech talent incubator that empowers recent BC tech graduates to
             work on real industry projects that require high-quality and
             cost-effective solutions.
           </p>
           <p>
-            When I’m not spending my days coding and designing, you’ll probably
+            When I'm not spending my days coding and designing, you'll probably
             find me riding my jeep out in the mountains, trying out new food
             with friends, or testing out my Nikon film camera. Feel free to
-            checkout my projects below or browse to your heart&apos;s content!
+            checkout my projects below or browse to your heart's content!
           </p>
           {/* <ImgCont>
         <Image src="/profile.jpg" width={300} height={300} />
@@ -358,6 +358,8 @@ export default function Home() {
             })}
           </Carousel>
         </Apps>
+        <br/>
+        <br/>
       </Center>
     </Main>
   );
