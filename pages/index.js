@@ -358,6 +358,8 @@ export default function Home() {
             })}
           </Carousel>
         </Apps>
+        <br />
+        <br />
       </Center>
     </Main>
   );
