@@ -287,20 +287,20 @@ export default function Home() {
           <div className="margin_header">
             <Header text="Hello" />
           </div>
-          <h1>I'm Josh Renema</h1>
+          <h1>I&apos;m Josh Renema</h1>
           <p>
-            I'm a Full Stack Developer and Designer, currently living in
+            I&apos;m a Full Stack Developer and Designer, currently living in
             Surrey, Canada. I enjoy creating projects that live on the internet,
             whether that be websites, applications, or anything in between. I
             always strive for my projects to provide real world value.
           </p>
           <p>
-            I've just wrapped up my diploma at the Digital Design and
-            Development program at BCIT, where I've learned how to develop and
+            I&apos;ve just wrapped up my diploma at the Digital Design and
+            Development program at BCIT, where I&apos;ve learned how to develop and
             design responsive, cross-platform applications.
           </p>
           <p>
-            I'm currently working as a Full Stack Developer at{" "}
+            I&apos;m currently working as a Full Stack Developer at{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -313,10 +313,10 @@ export default function Home() {
             cost-effective solutions.
           </p>
           <p>
-            When I'm not spending my days coding and designing, you'll probably
+            When I&apos;m not spending my days coding and designing, you&apos;ll probably
             find me riding my jeep out in the mountains, trying out new food
             with friends, or testing out my Nikon film camera. Feel free to
-            checkout my projects below or browse to your heart's content!
+            checkout my projects below or browse to your heart&apos;s content!
           </p>
           {/* <ImgCont>
         <Image src="/profile.jpg" width={300} height={300} />
@@ -358,8 +358,6 @@ export default function Home() {
             })}
           </Carousel>
         </Apps>
-        <br/>
-        <br/>
       </Center>
     </Main>
   );
