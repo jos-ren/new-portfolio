@@ -7,7 +7,7 @@ import React from "react";
 if (typeof window !== 'undefined' && localStorage.colorTheme !== '"light-theme"') {
   localStorage.setItem("colorTheme", '"dark-theme"');
   // console.log(localStorage.colorTheme)
-} else if (typeof window !== 'undefined' && localStorage.colorTheme !== '"dark-theme"'){
+} else if (typeof window !== 'undefined' && localStorage.colorTheme !== '"dark-theme"') {
   localStorage.setItem("colorTheme", '"light-theme"');
   // console.log(localStorage.colorTheme)
 }
@@ -54,7 +54,7 @@ export const MyApp = ({ Component, pageProps }) => {
                 <div>Resume</div>
               </div>
             </Link>
-            <button className="toggle" onClick={colorTheme.toggle} style={{marginRight: "20px"}}>
+            <button className="toggle" onClick={colorTheme.toggle} style={{ marginRight: "20px" }}>
               <Image width={20} height={20} className="toggle_img" src={icon} />
             </button>
             <button className="toggle" onClick={colorTheme.toggle}>
@@ -64,7 +64,47 @@ export const MyApp = ({ Component, pageProps }) => {
         </nav>
       </header>
       <Component {...pageProps} />
-      <footer>hellooooo</footer>
+      <footer className="footer">
+        <nav>
+          <div className="nav-r">
+            <Link href="/">
+              <div className="link">
+                <div>Home</div>
+              </div>
+            </Link>
+            <Link href="/resume">
+              <div className="link">
+                <div>Resume</div>
+              </div>
+            </Link>
+
+            {/* add socials here */}
+
+            <Link href="/">
+              <button className="toggle" onClick={colorTheme.toggle}>
+                <Image width={20} height={20} className="toggle_img" src={icon} />
+              </button>
+            </Link>
+            <Link href="/">
+              <button className="toggle" onClick={colorTheme.toggle}>
+                <Image width={20} height={20} className="toggle_img" src={icon} />
+              </button>
+            </Link>
+            <Link href="/">
+              <button className="toggle" onClick={colorTheme.toggle}>
+                <Image width={20} height={20} className="toggle_img" src={icon} />
+              </button>
+            </Link>
+            <Link href="/">
+              <button className="toggle" onClick={colorTheme.toggle}>
+                <Image width={20} height={20} className="toggle_img" src={icon} />
+              </button>
+            </Link>
+          </div>
+        </nav>
+      </footer>
+      <br />
+      <br />
     </div>
   );
 };

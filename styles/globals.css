@@ -6,12 +6,10 @@
   --secondary-bg: #e2e8f0;
   --secondary-bg-hover: #cdd7e5;
   --tertiary: #7e8bb6;
-  --gradient: linear-gradient(
-    90deg,
-    rgba(66, 84, 147, 1) 0%,
-    rgba(68, 171, 144, 1) 73%,
-    rgba(26, 117, 135, 1) 100%
-  );
+  --gradient: linear-gradient(90deg,
+      rgba(66, 84, 147, 1) 0%,
+      rgba(68, 171, 144, 1) 73%,
+      rgba(26, 117, 135, 1) 100%);
 }
 
 .dark-theme {
@@ -92,6 +90,10 @@ a {
   color: var(--gradient);
 }
 
+.footer {
+  background-color: var(--secondary-bg);
+}
+
 .link {
   display: flex;
   justify-content: center;
@@ -127,6 +129,7 @@ a {
 .toggle:focus {
   border: 2px solid var(--headings);
 }
+
 .toggle:hover,
 .toggle:active {
   background-color: var(--secondary-bg-hover);
@@ -227,4 +230,5 @@ a {
   box-shadow: none;
   background: var(--text);
 }
+
 /* ---------------------------------------------------- */
