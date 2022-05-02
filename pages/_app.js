@@ -3,6 +3,8 @@ import useColorTheme from "use-color-theme";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { FiChevronDown } from "react-icons/fi";
+import { BsLinkedin, BsGithub, BsBehance } from "react-icons/bs";
 
 if (typeof window !== 'undefined' && localStorage.colorTheme !== '"light-theme"') {
   localStorage.setItem("colorTheme", '"dark-theme"');
@@ -54,8 +56,9 @@ export const MyApp = ({ Component, pageProps }) => {
                 <div>Resume</div>
               </div>
             </Link>
-            <button className="toggle" onClick={colorTheme.toggle} style={{ marginRight: "20px" }}>
-              <Image width={20} height={20} className="toggle_img" src={icon} />
+            {/* chevron should open up dropdown with socials */}
+            <button className="toggle" style={{ marginRight: "20px" }}>
+              <FiChevronDown size={20} />
             </button>
             <button className="toggle" onClick={colorTheme.toggle}>
               <Image width={20} height={20} className="toggle_img" src={icon} />
@@ -64,14 +67,11 @@ export const MyApp = ({ Component, pageProps }) => {
         </nav>
       </header>
       <Component {...pageProps} />
+
       <footer className="footer">
+        {/* need center nav */}
         <nav>
           <div className="nav-r">
-            <Link href="/">
-              <div className="link">
-                <div>Home</div>
-              </div>
-            </Link>
             <Link href="/resume">
               <div className="link">
                 <div>Resume</div>
@@ -79,32 +79,29 @@ export const MyApp = ({ Component, pageProps }) => {
             </Link>
 
             {/* add socials here */}
+            {/* behance, github, linkedin, resume */}
 
             <Link href="/">
               <button className="toggle" onClick={colorTheme.toggle}>
-                <Image width={20} height={20} className="toggle_img" src={icon} />
+                <BsGithub size={20} />
               </button>
             </Link>
             <Link href="/">
               <button className="toggle" onClick={colorTheme.toggle}>
-                <Image width={20} height={20} className="toggle_img" src={icon} />
+                <BsLinkedin size={20} />
               </button>
             </Link>
             <Link href="/">
               <button className="toggle" onClick={colorTheme.toggle}>
-                <Image width={20} height={20} className="toggle_img" src={icon} />
-              </button>
-            </Link>
-            <Link href="/">
-              <button className="toggle" onClick={colorTheme.toggle}>
-                <Image width={20} height={20} className="toggle_img" src={icon} />
+                <BsBehance size={20} />
               </button>
             </Link>
           </div>
+          <div>Josh Renema 2022</div>
         </nav>
+        <br />
+        <br />
       </footer>
-      <br />
-      <br />
     </div>
   );
 };
