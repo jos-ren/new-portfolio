@@ -47,7 +47,7 @@ export default function Resume() {
       </Head>
       <div>
         <Download>
-          <a href="josh_renema_resume.pdf" download="josh_renema_resume">
+          <a href="JoshRenema_Resume.pdf" download="JoshRenema_Resume">
             <Button text="Download Resume" width="100px" />
           </a>
         </Download>
